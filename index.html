@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- bootstrap file -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--fontawesome file  -->
+	<link rel="stylesheet" href="css/all.min.css">
+	<!-- my css file -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black" >
+	<!-- search inputs -->
+
+	
+	<!-- spinner -->
+	<span class="loader mySpinner"></span>
+	<!-- ############ start navmenu ################### -->
+	<nav class="position-relative">
+		<div class="myNav">
+			<div class="d-flex">
+				<div class="vh-100 bg-black w-50 myNavMenu">
+					<ul class="list-unstyled p-4 listStyle">
+						<li class="mb-3"><a href="#" class="text-white text-decoration-none" id="search">Search</a></li>
+						<li class="mb-3"><a href="#" class="text-white text-decoration-none" id="categories" onclick="">Categories</a></li>
+						<li class="mb-3"><a href="#" class="text-white text-decoration-none" id="area">Area</a></li>
+						<li class="mb-3"><a href="#" class="text-white text-decoration-none" id="ingredintes" onclick="ingredintesList();">Ingredintes</a></li>
+						<li class="mb-3"><a href="#" class="text-white text-decoration-none" id="contactUs" onclick="ContactUs();">Contact Us</a></li>
+					</ul>
+			</div>
+				<div class="w-25 py-3 bg-white d-flex flex-column justify-content-between align-items-center">
+					<div class="w-100 text-center">
+						<img src="images/logo.png" class="w-75" alt="">
+					</div>
+					<div class="fs-3">
+						<i class="fa-solid fa-bars menuButton" onclick="openNav();"></i>
+						<p class="exitBtn fs-3 fw-bolder" onclick=" closeNav();">X</p>
+					</div>
+					<div class="mb-3 d-flex flex-column">
+						<i class="fa-solid fa-globe my-2"></i>
+						<i class="fa-solid fa-share-nodes"></i>					
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+	</nav>
+	<div class="form w-75 mx-auto">
+		<div class="container ms-3">
+			<div class="row ">
+				<div class="col-md-6">
+					<div class=" mt-5">
+						<input type="text" placeholder="Enter Your Name "class="form-control my-2 name" oninput="NameRegex();" >
+						<input type="text" placeholder="Enter Your Phone" class="form-control my-2 phone" oninput="PhoneRegex();">
+						<input type="password" placeholder="Enter Your Password" class="form-control my-2 password" oninput="PasswordRegex();">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="mt-5">
+						<input type="email" placeholder="Enter Your Email"class="form-control my-2 email" oninput="EmailRegex();">
+						<input type="text" placeholder="Enter Your Age" class="form-control my-2 age" oninput="AgeRegex();">
+						<input type="password" placeholder="ReEnter Password" class="form-control my-2 repassword" oninput="RePasswordRegex();">
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-outline-danger w-25 submitBtn" onclick="SubmitForm()">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="inputs">
+		<div class="d-flex flex-wrap justify-content-evenly align-items-center">
+			<div class="text-center">
+				<input type="text" placeholder="Search By Name" oninput="searchByName();" class=" myInput1 myInput px-2 py-1  ">
+			</div>
+		
+		
+			<div class="text-center">
+				<input type="text" placeholder="Search By First Letter" maxlength="1" oninput="searchByFirstLetter();" class="myInput2 myInput px-2 py-1">
+			</div>
+		
+			<div class="text-xl-center">
+				<span class="text-white fs-1 cursor-pointer mx-auto" onclick="closeSearch();">X</span>
+			</div>
+		</div>
+	</div>
+	<!-- ############ end navmenu ################### -->
+
+<section>
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+	<!-- ############ start categories ################### -->
+	<section class="">
+		<div class="Category">
+			<div class="container">
+				<div class="row" id="category">
+
+					
+				</div>
+			</div>
+
+		</div>
+
+		<div class="CategoryDetails">
+			<div class="container">
+				<div class="row" id="categoryDetails">					
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ############ end categories ################### -->
+<!-- show single meal -->
+	<section class="my-4">
+		<div class="container">
+			<div class="row" id="showSingleMeal">
+
+			</div>
+		</div>
+	</section>
+
+
+<!-- ###################start area################### -->
+	<section>
+		<div>
+			<div class="container">
+				<div class="row g-3 " id="areas">
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- ###################end area################### -->
+
+<!-- ###################start ingredintes################### -->
+
+	<section>
+		<div class="container">
+			<div class="row" id="ingredintesContent">
+
+			</div>
+
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row" id="myIngredintes">
+				
+			</div>
+
+		</div>
+	</section>
+
+	<!-- ###################end ingredintes################### -->
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
